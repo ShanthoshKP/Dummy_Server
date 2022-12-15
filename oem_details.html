@@ -126,20 +126,20 @@
 		"stateMutability": "view",
 		"type": "function"
 	}
-]
+];
         var contractaddress = '0xDd4FED312a15e083F20642C695A036f25DdDEd3E';
         
         function add_details() {
             var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
-			                  var ds1 = document.getElementById("oaddr").value;
-			                  var ds2 = document.getElementById("oname").value;
-                        var tname = document.getElementById("pname").value;
-                        var id = document.getElementById("oid").value;
-                        var tdate = document.getElementById("mdate").value;
-                        var tdate1 = document.getElementById("maint").value;
-                        var tunits = document.getElementById("condn").value;
-                        var tphn = document.getElementById("phonenum").value;
-                        var ttype = document.getElementById("atype").value;
+			      var ds1 = document.getElementById("oaddr").value;
+			      var ds2 = document.getElementById("oname").value;
+                              var tname = document.getElementById("pname").value;
+                              var id = document.getElementById("oid").value;
+                              var tdate = document.getElementById("mdate").value;
+                              var tdate1 = document.getElementById("maint").value;
+                              var tunits = document.getElementById("condn").value;
+                              var tphn = document.getElementById("phonenum").value;
+                              var ttype = document.getElementById("atype").value;
              var result = myContract.methods.store_manufacture_details(id,tphn,tdate,ds2,ds1,tname,tdate1,ttype,tunits).send(function (err, result) {
                
                 if (err) { console.log(err); }
@@ -155,8 +155,8 @@
                 if (err) { console.log(err); }
                 if (result) { 
                     document.getElementById("get_oname").innerHTML = result[0];
-		                document.getElementById("get_oaddr").innerHTML = result[1];
-		                document.getElementById("get_pname").innerHTML = result[2];
+		    document.getElementById("get_oaddr").innerHTML = result[1];
+		    document.getElementById("get_pname").innerHTML = result[2];
                     document.getElementById("get_condn").innerHTML = result[3];
                 }
                 });
@@ -185,15 +185,19 @@
             <tr><td><input type="button" onclick="show_details()" value="Get Details"></td></tr>
             <tr>
 			<td> OEM Name:</td>
-			<td><div id="get_aname"></div></td>
+			<td><div id="get_oname"></div></td>
 		  </tr>
             <tr>
-			<td>Airline Address:</td>
-			<td><div id="get_addr"></div></td>
+			<td>OEM Address:</td>
+			<td><div id="get_oaddr"></div></td>
 		  </tr>
            <tr>
 			<td> Part Name:</td>
-			<td><div id="get_pname1"></div></td>
+			<td><div id="get_pname"></div></td>
+		  </tr>
+	    <tr>
+			<td> Part Condition:</td>
+			<td><div id="get_condn"></div></td>
 		  </tr>
 		</table>
 	</form>
