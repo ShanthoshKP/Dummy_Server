@@ -152,16 +152,16 @@
         
         function add_details() {
             var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
-			                        var ds1 = document.getElementById("oaddr").value;
-			                        var ds2 = document.getElementById("oname").value;
-                                                var pname = document.getElementById("pname1").value;
-                                                var pid = document.getElementById("pid1").value;
-                                                var madate = document.getElementById("mdate1").value;
-                                                var attype = document.getElementById("atype").value;
-                                                var pcond = document.getElementById("pcon").value;
-                                                var pmaint = document.getElementById("pman").value;
-                                                var phn = document.getElementById("phone").value;
-                                                var oid = document.getElementById("oid1").value;
+			  var ds1 = document.getElementById("oaddr").value;
+			  var ds2 = document.getElementById("oname").value;
+                          var pname = document.getElementById("pname1").value;
+                          var pid = document.getElementById("pid1").value;
+                          var madate = document.getElementById("mdate1").value;
+                          var attype = document.getElementById("atype").value;
+                          var pcond = document.getElementById("pcon").value;
+                          var pmaint = document.getElementById("pman").value;
+                          var phn = document.getElementById("phone").value;
+                          var oid = document.getElementById("oid1").value;
              var result = myContract.methods.store_manufacture_details(oid,pid,madate,pmaint,phn,ds2,ds1,attype,pname,pcond).send(function (err, result) {
                
                 if (err) { console.log(err); }
