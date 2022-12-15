@@ -1,10 +1,26 @@
 <html>
 <head>
 <title>Register</title>
+	<script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+</script>
 </head>
     <body>
-	<p><a href="doctor.html"><button type="submit" class="hidden" style='margin-right:16px'>Doctor Registration</button></a><a href="patient.html"><button type="submit" class="hidden" style='margin-right:16px'>Patient Registration</button></a><a href="patient_details.html"><button type="submit" class="hidden" style='margin-right:16px'>View Patient Details</button></a><a href="record_details.html"><button type="submit" class="hidden" style='margin-right:16px'>View Medical Record</button></a><a href="examine_details.html"><button type="submit" class="hidden" style='margin-right:16px'>View Patient Examine details</button></a></p>
-      
+<form>
+<select name="list" id="list" accesskey="target">
+    <option value='none' selected>Choose a theme</option>
+    <option value="Provider.html">Logistic Provider</option>
+    <option value="Oem.html">OEM</option>
+    <option value="Mro.html">MRO</option>
+</select>
+<input type=button value="Go" onclick="goToNewPage()" />
+</form>
         <h1>Airline Registration </h1>
         <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.js"></script>
     <script>	
