@@ -152,8 +152,8 @@
         
         function add_details() {
             var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
-			var ds1 = document.getElementById("oaddr").value;
-			var ds2 = document.getElementById("oname").value;
+			                        var ds1 = document.getElementById("oaddr").value;
+			                        var ds2 = document.getElementById("oname").value;
                                                 var pname = document.getElementById("pname1").value;
                                                 var pid = document.getElementById("pid1").value;
                                                 var madate = document.getElementById("mdate1").value;
@@ -238,7 +238,7 @@
 			<td> phone num</td>
 			<td><input type="text" id="phone" name="phone"></td>
 		  </tr>
-		  <tr>
+	    <tr>
 		  <td><input type="button" onclick="add_details()" value="Register"></td>
 		  </tr>
 		</table>
