@@ -122,7 +122,7 @@
 		"type": "function"
 	}
 ];
-        var contractaddress = '0xEcdd3A1eF48747fFD62759a05D68cd6e5b98842D';
+        var contractaddress = '0x266bEb869b29934d94dcEa39dE807664A6aa6862';
         
         function add_details() {
             var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
@@ -175,20 +175,20 @@
 		<table style="width:25%"> 
             <tr>
 			<td>Aicraft Id:</td>
-			<td><input type="text" id="id1" name="id1"></td>
+			<td><input type="text" id="tid" name="tid"></td>
 		  </tr>
             <tr><td><input type="button" onclick="show_details()" value="Get Details"></td></tr>
             <tr>
 			<td> Airline Name:</td>
-			<td><input type="text" id="aname" name="aname"></td>
+			<td><div id="get_aname"></div></td>
 		  </tr>
             <tr>
 			<td>Airline Address:</td>
-			<td><input type="text" id="addr" name="addr"></td>
+			<td><div id="get_addr"></div></td>
 		  </tr>
            <tr>
 			<td> Part Name:</td>
-			<td><input type="text" id="pname1" name="pname1"></td>
+			<td><div id="get_pname1"></div></td>
 		  </tr>
 		</table>
 	</form>
