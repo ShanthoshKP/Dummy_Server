@@ -148,7 +148,7 @@
 		"type": "function"
 	}
 ];
-        var contractaddress = '0x1d4Cd1C76841D28611362Bf2Af814C2076f9fF12';
+        var contractaddress = '0x33eDCEf845f953605D3Bde5D99dE4aC5912f3668';
         
         function add_details() {
             var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
@@ -177,8 +177,8 @@
                 if (err) { console.log(err); }
                 if (result) { 
                     document.getElementById("get_oname").innerHTML = result[0];
-	    document.getElementById("get_oaddr").innerHTML = result[1];
-	    document.getElementById("get_pname1").innerHTML = result[2];
+	            document.getElementById("get_oaddr").innerHTML = result[1];
+	            document.getElementById("get_pname1").innerHTML = result[2];
                     document.getElementById("get_pcon").innerHTML = result[3];
                 }
                
